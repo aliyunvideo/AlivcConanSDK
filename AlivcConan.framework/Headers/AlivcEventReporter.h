@@ -175,6 +175,22 @@
  @param environmentType 环境参数
  */
 - (void)updateServerType:(AlivcConanEnvironmentType)environmentType;
+    
+
+/**
+ 更新Aliyun 控制台appid
+ 
+ @param aliyunAppId 控制台appid
+ */
+- (void)updateAliyunAppId:(NSString *)aliyunAppId;
+    
+
+/**
+ 更新角色信息
+ 
+ @param role 角色信息
+ */
+- (void)updateRole:(NSString *)role;
 
 /*******************************************************/
 
