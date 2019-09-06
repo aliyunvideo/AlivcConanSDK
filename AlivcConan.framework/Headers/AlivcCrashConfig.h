@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "AlivcConanConstans.h"
 
+OBJC_EXPORT
 @interface AlivcCrashConfig : NSObject
 
 

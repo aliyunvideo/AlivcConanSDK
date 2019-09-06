@@ -17,18 +17,21 @@ namespace AlivcConan
     *@param[in]  errorCode 错误码
     *@remark
     */
+    CONAN_EXTERN
     virtual void OnEventReportErrorOccur(AlivcEventReport* report, int errorCode) = 0;
 
     /**
     *@brief 鉴权信息即将失效
     *@remark 配置使用外部鉴权信息时会通知鉴权即将过期，调用方需要更新重新请求并更新鉴权信息
     */
+    CONAN_EXTERN
     virtual void OnStsWillExpireSoon(AlivcEventReport* report, unsigned long afterTime) = 0;
 
     /**
     *@brief 鉴权信息失效
     *@remark 配置使用外部鉴权信息时会通知鉴权即将过期，调用方需要更新重新请求并更新鉴权信息
     */
+    CONAN_EXTERN
     virtual void OnStsExpired(AlivcEventReport* report) = 0;
   };
 }

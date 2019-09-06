@@ -1,6 +1,7 @@
 #ifndef Alivc_Event_Report_h
 #define Alivc_Event_Report_h
 
+#include "AlivcConanExport.h"
 #include "AlivcEventReportConfig.h"
 #include "AlivcEventReportListener.h"
 
@@ -16,11 +17,13 @@ namespace AlivcConan
     *@brief 创建数据埋点实例
     *@param[in] config 数据埋点实例配置
     */
+    CONAN_EXTERN
     static AlivcEventReport* CreateEventReport(AlivcEventReportConfig config);
 
     /**
     *@brief 通过id查找数据埋点实例
     */
+    CONAN_EXTERN
     static AlivcEventReport* GetEventReportById(long long id);
 
     /**
@@ -28,6 +31,7 @@ namespace AlivcConan
     *@param[in]
     *@remark 调用释放后不可在操作此数据埋点实例
     */
+    CONAN_EXTERN
     static void Release(AlivcEventReport* eventReport);
 
     /**
@@ -35,6 +39,7 @@ namespace AlivcConan
     *@param[in]
     *@remark
     */
+    CONAN_EXTERN
     virtual void Init() = 0;
 
     /**
@@ -42,6 +47,7 @@ namespace AlivcConan
     *@return 埋点实例Id
     *@remark
     */
+    CONAN_EXTERN
     virtual long long GetId() = 0;
 
     /**
@@ -49,6 +55,7 @@ namespace AlivcConan
     *@param[in]  param 埋点公共参数
     *@remark
     */
+    CONAN_EXTERN
     virtual int SetPublicParam(const char* param) = 0;
 
     /**
@@ -57,6 +64,7 @@ namespace AlivcConan
     *@param[in]  value 更新埋点键值
     *@remark
     */
+    CONAN_EXTERN
     virtual int UpdatePublicParam(const char* key, const char* value) = 0;
 
     /**
@@ -64,6 +72,7 @@ namespace AlivcConan
     *@param[in]  listener 数据埋点监听器
     *@remark
     */
+    CONAN_EXTERN
     virtual void SetEventReportListener(AlivcEventReportListener* listener) = 0;
 
     /**
@@ -73,6 +82,7 @@ namespace AlivcConan
     *@param[in]  flush 是否立即发送
     *@remark
     */
+    CONAN_EXTERN
     virtual int SendEvent(int eventId, const char* param, bool flush = false) = 0;
 
     /**
@@ -82,6 +92,7 @@ namespace AlivcConan
     *@param[in]  fmt... 埋点args字段格式及内容
     *@remark
     */
+    CONAN_EXTERN
     virtual int SendEvent(int eventId, bool flush, const char *fmt, ...) = 0;
 
     /**
@@ -93,6 +104,7 @@ namespace AlivcConan
     *@param[in]  const char * expireTime  STS鉴权信息过期时间
     *@remark 使用外部鉴权时鉴权到期需要重新设置
     */
+    CONAN_EXTERN
     virtual int ResetAcessTokenInfo(const char* accessKey, const char* secretKey, const char* securityToken, const char* expireTime) = 0;
     
     /**
@@ -101,6 +113,7 @@ namespace AlivcConan
      *@param[in]  param 埋点数据
      *@remark
      */
+    CONAN_EXTERN
     virtual int SendCrashEventAndRelease(int eventId, const char* param) = 0;
 
   protected:

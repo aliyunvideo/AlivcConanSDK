@@ -12,7 +12,7 @@
 
 @protocol AlivcEventReporterDelegate;
 
-
+OBJC_EXPORT
 @interface AlivcEventReporter : NSObject
 
 

@@ -22,6 +22,7 @@ typedef NS_ENUM(NSUInteger, AlivcConanEnvironmentType) {
 /**
  埋点配置
  */
+OBJC_EXPORT
 @interface AlivcEventReporterConfig : NSObject
 
 /**

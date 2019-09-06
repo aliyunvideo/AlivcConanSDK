@@ -4,6 +4,8 @@
 #include <string>
 #include <map>
 #include "AlivcConanDefine.h"
+#include "AlivcConanExport.h"
+
 
 namespace AlivcConan
 {
@@ -57,8 +59,8 @@ namespace AlivcConan
   class AlivcEventReportConfig
   {
   public:
-    AlivcEventReportConfig() {}
-    ~AlivcEventReportConfig() {}
+      CONAN_EXTERN AlivcEventReportConfig() {}
+      CONAN_EXTERN ~AlivcEventReportConfig() {}
 
     const char* mClientID { nullptr };                            //设备唯一Id（UUID)
     const char* mTerminalType{ nullptr };                         //终端类型,如pc，pad，iphone，andorid

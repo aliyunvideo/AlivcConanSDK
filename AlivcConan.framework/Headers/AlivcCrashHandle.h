@@ -10,6 +10,7 @@
 
 @class AlivcCrashConfig;
 
+OBJC_EXPORT
 @interface AlivcCrashHandle : NSObject
 
 /**

@@ -28,7 +28,7 @@ typedef NS_ENUM(NSUInteger,AlivcLoggerUploadStrategy) {
     AlivcLoggerUploadStrategyWifi  = 1,    /* 仅WiFi下上传 */
 };
 
-
+OBJC_EXPORT
 @interface AlivcLoggerConfig : NSObject
 
 

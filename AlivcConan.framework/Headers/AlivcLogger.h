@@ -12,7 +12,7 @@
 @class AlivcLoggerConfig;
 @protocol AlivcLoggerDelegate;
 
-
+OBJC_EXPORT
 @interface AlivcLogger : NSObject
 
 

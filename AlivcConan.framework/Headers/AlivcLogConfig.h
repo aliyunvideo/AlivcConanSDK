@@ -41,8 +41,8 @@ namespace AlivcConan
   class AlivcLogConfig
   {
   public:
-    AlivcLogConfig() {}
-    ~AlivcLogConfig() {}
+      CONAN_EXTERN AlivcLogConfig() {}
+      CONAN_EXTERN ~AlivcLogConfig() {}
 
     const char* mClientID{ nullptr };                            //设备唯一Id（UUID)
     const char* mTerminalType{ nullptr };                        //终端类型,如pc，pad，iphone，andorid
