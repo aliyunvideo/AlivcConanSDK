@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "AlivcConan"
-  s.version      = "1.0.3"
+  s.version      = "1.0.2.2"
   s.summary      = "AlivcConan_iOS"
   s.description  = <<-DESC
                    It's an SDK for aliyun conan sdk, which implement by Objective-C.
